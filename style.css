@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: hsl(0, 6%, 24%);
+  font-size: 2.4rem;
+  letter-spacing: 0.7rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+span {
+  font-weight: 300;
+  color: hsl(0, 36%, 70%);
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-row-gap: 50px;
+}
+
+.logo_container {
+  grid-row: 1/2;
+  padding: 50px 0 0 25px;
+}
+
+.img_container {
+  grid-row: 2/3;
+}
+
+.logo_container img {
+  width: 40%;
+}
+
+.desktop_img {
+  display: none;
+}
+.mobile_img{
+    width: 100%;
+}
+.title_container {
+  margin: auto;
+  text-align: center;
+}
+
+.content_container {
+  width: 90%;
+  margin: auto;
+  color: hsl(0, 36%, 70%);
+  text-align: center;
+  line-height: 1.7;
+}
+
+p {
+  padding-bottom: 50px;
+}
+
+form {
+  position: relative;
+}
+
+.form_container {
+  width: 80%;
+  margin: auto;
+}
+input {
+  background-color: transparent;
+  border: 1px solid hsl(0, 36%, 70%);
+  padding: 15px;
+  border-radius: 50px;
+  width: 100%;
+  font-size: 16px;
+  flex-grow: 1;
+  height: 55px;
+}
+
+input::placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  color: hsl(0, 36%, 70%);
+  font-weight: 200;
+  padding: 15px;
+}
+
+button {
+  background-image: linear-gradient(hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 55px;
+}
+
+footer {
+  padding-top: 75px;
+}
+
+@media (min-width: 700px){
+    .mobile_img{
+        display: none;
+    }
+
+    .desktop_img{
+        display: inline-block;
+        width: 100%;
+        min-height: 720px;
+    }
+
+    .grid_container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 225px);
+        grid-row-gap: 0px;
+    }
+
+    .img_container{
+        grid-column: 2/3;
+        grid-row: 1/4;
+        
+    }
+    .logo_container{
+        padding: 0;
+        width: 60%;
+        margin: auto;
+    }
+
+    .title_container{
+        width: 60%;
+        margin: auto;
+        text-align: left;
+    }
+
+    .content_container{
+        width: 60%;
+        margin: auto;
+        text-align: left;
+    }
+
+    .form_container{
+        width: 100%;
+    }
+}
